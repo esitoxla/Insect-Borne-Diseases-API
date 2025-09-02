@@ -150,7 +150,7 @@ export const editDisease = async (req, res, next) => {
       error.statusCode = 404;
       return next(error);
     }
-    res.status(200).json("Disease updated successfully!");
+    res.status(200).json({ message: "Disease updated successfully!"});
   } catch (err) {
     const error = new Error(err.message);
     error.statusCode = 404;
